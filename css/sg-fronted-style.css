@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/***** General design *****/
+
+a,
+button {
+  cursor: pointer;
+}
+
+a:focus,
+a:hover,
+a:visited {
+  outline: none;
+}
+
+*:focus,
+*:hover {
+  outline: none;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/***** Grid/List Card common design *****/
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.vc-list .datalist .meta-data,
+.vc-grid .item .meta-data,
+.vc-list .datalist .rightcol,
+.vc-grid .item .rightcol {
+  line-height: 0;
+}
+
+.vc-list .datalist .comment-count,
+.vc-grid .item .comment-count {
+  padding-left: 20px;
+  position: relative;
+}
+
+.vc-list .datalist .comment-count:before,
+.vc-grid .item .comment-count::before {
+  position: absolute;
+  content: "";
+  background: url("./images/ic-comment.svg") no-repeat center center;
+  background-size: 14px 14px;
+  top: 1px;
+  left: 2px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.vc-list .datalist .post-title,
+.vc-grid .item .post-title {
+  margin: 0 5px 5px 0;
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+
+.vc-list .datalist .post-title a,
+.vc-grid .item .post-title a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.vc-list .datalist .post-title a:hover,
+.vc-grid .item .post-title a:hover {
+  color: #2e64e6;
+}
+
+.vc-list .datalist .readmore,
+.vc-grid .item .readmore {
+  line-height: 0;
+  margin: 18px 0 0;
+}
+
+.vc-list .datalist .readmore a,
+.vc-grid .item .readmore a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: #2e64e6;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding-right: 22px;
+}
+
+.vc-list .datalist .readmore a svg,
+.vc-grid .item .readmore a svg {
+  position: absolute;
+  /* content: "\2192"; */
+  /* background: url("./images//ic-arrow.svg") no-repeat center center; */
+  /* background-size: 20px 10px; */
+  height: 10px;
+  width: 20px;
+  right: 0;
+  top: 3px;
+  transition: all 0.3s;
+  transform: translate(0);
+  fill: #2e64e6;
+}
+
+.vc-list .datalist .readmore a:hover svg,
+.vc-grid .item .readmore a:hover svg {
+  transform: translate(3px);
+}
+
+.vc-list .datalist .post-description,
+.vc-grid .item .post-description {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Nunito", sans-serif;
+  color: #000;
+  margin: 8px 0 0;
+  max-width: 100%;
+}
+
+.vc-list .datalist .post-description p,
+.vc-grid .item .post-description p {
+  margin: 0 0 10px;
+}
+
+.vc-list .datalist .post-description p:last-child,
+.vc-grid .item .post-description p:last-child {
+  margin: 0;
+}
+
+/* .vc-list .datalist .post-description {
+  width: 750px;
+} */
+
+/***** Grid view design *****/
+
+.vc-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vc-grid .item {
+  background: #ffffff;
+  /* padding: 15px 15px 55px; */
+  position: relative;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.03);
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 20px !important;
+}
+
+.vc-grid .item .left {
+  line-height: 0;
+}
+
+.vc-grid .item .rightcol {
+  padding: 20px 20px 50px;
+}
+
+.vc-grid .item .meta-data {
+  margin: 0 0 16px 8px;
+}
+
+.vc-grid .item .readmore {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.vc-grid .item .thumbnailimage {
+  display: block;
+}
+
+.vc-grid .item .thumbnailimage img {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.vc-grid .item .post-title,
+.vc-grid .item .date {
+  display: block;
+}
+
+.vc-grid .item .date,
+.vc-list .datalist .date {
+  position: relative;
+  padding-left: 20px;
+  margin-right: 5px;
+}
+
+.vc-grid .item .date::before,
+.vc-list .datalist .date::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("./images/ic-clock.svg") no-repeat center;
+  background-size: 16px 16px;
+  height: 16px;
+  width: 16px;
+}
+
+/***** List view design *****/
+
+.vc-list .datalist {
+  /* display: flex; */
+  /* align-items: flex-start; */
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.vc-list .datalist:before,
+.vc-list .datalist::after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+.vc-list .datalist:after {
+  clear: both;
+}
+
+.vc-list .datalist .thumbnailimage {
+  line-height: 0;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.vc-list .datalist .thumbnailimage img {
+  margin: 0 auto;
+}
+
+.vc-list .datalist .thumbnailimage:hover {
+  opacity: 0.9;
+  border-bottom-color: #2e64e6;
+}
+
+.vc-list .datalist .meta-data,
+.vc-grid .item .meta-data {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #999;
+  position: relative;
+  margin: 0 0 10px;
+  justify-content: center;
+}
+
+.vc-list .datalist .meta-data .comment-count,
+.vc-list .datalist .meta-data .date {
+  display: inline-flex;
+}
+
+/***** Pagination design *****/
+
+.vc-pagination {
+  text-align: center;
+}
+
+.vc-pagination a:visited,
+.vc-pagination a:hover,
+.vc-pagination a:focus {
+  color: #000;
+}
+
+.vc-pagination span,
+.vc-pagination a {
+  margin: 0 10px;
+  color: #000;
+  text-decoration: none !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Nunito", sans-serif;
+  display: inline-block;
+}
+
+.vc-pagination span.current,
+.vc-pagination a.current,
+.vc-pagination a:hover {
+  color: #2e64e6;
+}
+
+.vc-pagination span:first-child,
+.vc-pagination a:first-child {
+  margin-left: 0;
+}
+
+.vc-pagination a:last-child,
+.vc-pagination span:last-child {
+  margin-right: 0;
+}
+
+/***** Responsive design *****/
+
+@media (min-width: 600px) {
+  .vc-grid .item {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .vc-grid .item:hover {
+    border-bottom-color: #2e64e6;
+  }
+
+  .vc-grid .col-6,
+  .vc-grid .col-4,
+  .vc-grid .cols-3 {
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    margin: 0 20px 20px 0 !important;
+  }
+
+  .vc-grid .col-6:nth-child(2n),
+  .vc-grid .col-4:nth-child(2n),
+  .vc-grid .cols-3:nth-child(2n) {
+    margin: 0 0 20px !important;
+  }
+
+  .vc-list .datalist .left {
+    float: left;
+  }
+
+  .vc-list .datalist .thumbnailimage {
+    max-width: 100px;
+    margin: 0 20px 5px 0;
+    line-height: 0;
+    opacity: 1;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .vc-list .datalist .post-title,
+  .vc-grid .item .post-title {
+    text-align: left;
+  }
+
+  .vc-list .datalist .post-title a,
+  .vc-grid .item .post-title a {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .vc-list .datalist .meta-data {
+    justify-content: flex-start;
+  }
+
+  .vc-grid .item {
+    margin: 0 0 30px;
+  }
+
+  .vc-grid .item .meta-data {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 960px) {
+  .vc-list .datalist .thumbnailimage {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  .vc-grid .col-4,
+  .vc-grid .cols-3 {
+    flex: 0 0 calc(33.33% - 13.33px);
+    width: calc(33.33% - 13.33px);
+    max-width: calc(33.33% - 13.33px);
+    margin: 0 20px 20px 0 !important;
+  }
+
+  .vc-grid .col-4:nth-child(2n),
+  .vc-grid .cols-3:nth-child(2n) {
+    margin: 0 20px 20px 0 !important;
+  }
+
+  .vc-grid .col-4:nth-child(3n),
+  .vc-grid .cols-3:nth-child(3n) {
+    margin: 0 0 20px !important;
+  }
+}
+
+@media (min-width: 1366px) {
+  .vc-grid .cols-3 {
+    flex: 0 0 calc(25% - 15px);
+    width: calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    margin: 0 20px 20px 0 !important;
+  }
+
+  .vc-grid .cols-3:nth-child(3n) {
+    margin: 0 20px 20px 0 !important;
+  }
+
+  .vc-grid .cols-3:nth-child(4n) {
+    margin: 0 0 20px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .vc-list .datalist .thumbnailimage {
+    max-width: 240px;
+  }
+}
